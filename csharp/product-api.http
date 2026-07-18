@@ -1,6 +1,23 @@
 @product_api_HostAddress = http://localhost:5129
 
-GET {{product_api_HostAddress}}/weatherforecast/
+GET {{product_api_HostAddress}}/products/
 Accept: application/json
 
 ###
+GET {{product_api_HostAddress}}/products/2
+Accept: application/json
+
+###
+DELETE {{product_api_HostAddress}}/products/2
+Accept: application/json
+
+###
+POST {{product_api_HostAddress}}/products
+Content-Type: application/json
+
+{
+  "name": "Playstation 6",
+  "category": 1,
+  "price": 7000,
+  "isAvailable": true
+}
